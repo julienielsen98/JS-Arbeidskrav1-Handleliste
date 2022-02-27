@@ -1,0 +1,157 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  background-color: #e8e4d8;
+  font-family: "Italiana", serif;
+  letter-spacing: 4px;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 20% 80%;
+  grid-template-areas:
+    "header header header header"
+    "main main main main ";
+}
+
+header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-areas: " enough empty more imgmain";
+}
+
+.enough-container {
+  grid-area: enough;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.almost-empty-container {
+  grid-area: empty;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.buy-more-container {
+  grid-area: more;
+  width: 100%;
+  height: 110%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.imgmain {
+  grid-area: imgmain;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wheat {
+  height: 700px;
+  width: 500px;
+  position: relative;
+}
+
+button {
+  font-family: "Italiana", serif;
+  letter-spacing: 2px;
+  width: 380px;
+  height: 55px;
+  background: #da4d1e;
+  border: 1px solid #000000;
+  opacity: 1;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  font-family: "Italiana", serif;
+  letter-spacing: 2px;
+  width: 370px;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  opacity: 1;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+#price-input {
+  width: 370px;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  opacity: 1;
+}
+#buy-more-input {
+  width: 370px;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  opacity: 1;
+}
+
+#delete-btn {
+  height: 30px;
+  width: 80px;
+  float: left;
+  border-radius: 10px;
+  background: #ee0e0eec;
+  margin-top: 10px;
+}
+
+ul {
+  letter-spacing: 2px;
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+}
+
+.lists {
+  width: 350px;
+  height: 400px;
+  background: #ffffff;
+  border: 1px solid #707070;
+  opacity: 1;
+  padding-left: 30px;
+}

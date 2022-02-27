@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Arbeidskrav</title>
+  </head>
+  <body>
+    <header>
+      <h1>HANLDELISTE</h1>
+      <!--background: linear-gradient(#a5a081, #e6e2c5, #ffffff, #ca8748dc);-->
+    </header>
+    <main>
+      <div class="enough-container">
+        <input
+          type="text"
+          id="enough-input"
+          placeholder="Varer du har nok av"
+        />
+        <button id="add-btn" onclick="addGrocery()">LEGG TIL</button>
+
+        <div class="lists">
+          <ul id="enough-list"></ul>
+        </div>
+      </div>
+
+      <div class="almost-empty-container">
+        <input
+          type="text"
+          id="almost-empty-input"
+          placeholder="Varer du begynner å gå tom for"
+        />
+        <button id="add-btn" onclick="addGrocery2()">LEGG TIL</button>
+        <div class="lists">
+          <ul id="almost-empty-list"></ul>
+        </div>
+      </div>
+
+      <div class="buy-more-container">
+        <input
+          type="text"
+          id="buy-more-input"
+          placeholder="Varer du må handle"
+        />
+        <input type="text" id="price-input" placeholder="Kr" />
+        <button id="add-btn" onclick="addGrocery3()">LEGG TIL</button>
+        <div class="lists">
+          <ul id="buy-more-list"></ul>
+          <p id="sum-list"></p>
+        </div>
+      </div>
+
+      <div class="imgmain">
+        <img class="wheat" src="assets/stem-2121775_1280.png" alt="wheat" />
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
