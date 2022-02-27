@@ -1,5 +1,7 @@
-//alert("Velkommen!");
-//alert("Intruksjer:")
+alert("Velkommen!");
+alert(
+  "Instrukser for bruk av handlelisten: Bruk input-feltene til å legge til nye varer. Start fra venstre til høyre. På siste felt vil du får en totalsum for handelen din."
+);
 
 var enoughList = document.getElementById("enough-list");
 

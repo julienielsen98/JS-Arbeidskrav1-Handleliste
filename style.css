@@ -62,7 +62,7 @@ main {
 .buy-more-container {
   grid-area: more;
   width: 100%;
-  height: 110%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -130,14 +130,14 @@ input {
   width: 80px;
   float: left;
   border-radius: 10px;
-  background: #ee0e0eec;
+  background: #f51d1d;
   margin-top: 10px;
 }
 
 ul {
   letter-spacing: 2px;
   width: 75%;
-  background-color: rgba(255, 255, 255, 0.404);
+  background-color: rgb(255, 255, 255);
 }
 
 li {
@@ -149,7 +149,7 @@ li {
 
 .lists {
   width: 350px;
-  height: 400px;
+  height: 90%;
   background: #ffffff;
   border: 1px solid #707070;
   opacity: 1;
