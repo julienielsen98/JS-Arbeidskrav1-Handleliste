@@ -15,10 +15,10 @@ function addGrocery() {
   });
 
   console.log(enoughArray);
-  groceryArray();
+  addingToEnough();
 }
 
-function groceryArray() {
+function addingToEnough() {
   enoughList.innerHTML = "";
   for (let i = 0; i < enoughArray.length; i++) {
     enoughList.innerHTML += ` <li id="grocery-item">
@@ -37,7 +37,7 @@ function deleteItem(i) {
   if (confirmDelete === "ja") {
     alert(`${enoughArray[i].item} er nå slettet.`);
     enoughArray.splice(i, 1);
-    groceryArray();
+    addingToEnough();
   } else {
     alert("Sletting kansellert.");
   }
@@ -57,10 +57,10 @@ function addGrocery2() {
   });
 
   console.log(emptyArray);
-  groceryArray2();
+  addingToEmpty();
 }
 
-function groceryArray2() {
+function addingToEmpty() {
   almostEmptyList.innerHTML = "";
   for (let i = 0; i < emptyArray.length; i++) {
     almostEmptyList.innerHTML += `<li id="grocery-item2">
@@ -79,7 +79,7 @@ function deleteItem2(i) {
   if (confirmDelete2 === "ja") {
     alert(`${emptyArray[i].item} er nå slettet.`);
     emptyArray.splice(i, 1);
-    groceryArray2();
+    addingToEmpty();
   } else {
     alert("Sletting kansellert.");
   }
@@ -102,28 +102,30 @@ function addGrocery3() {
       item: buyMoreInput,
       price: priceInput,
     });
-    groceryArray3();
+
     console.log(buyArray);
 
-    function groceryArray3() {
-      buyMoreList.innerHTML = "";
-      for (let i = 0; i < buyArray.length; i++) {
-        buyMoreList.innerHTML += `<li id="grocery-item3">
+    const prices = buyArray.map((buy) => buy.price);
+    let sum = 0;
+
+    for (let i = 0; i < prices.length; i++) {
+      sum += +prices[i];
+      sumList.innerHTML = `TOTALT Å HANDLE FOR: ${sum} KR`;
+    }
+
+    console.log(sum);
+    addingToBuyMore();
+  }
+}
+
+function addingToBuyMore() {
+  buyMoreList.innerHTML = "";
+  for (let i = 0; i < buyArray.length; i++) {
+    buyMoreList.innerHTML += `<li id="grocery-item3">
                 ${buyArray[i].item}, ${buyArray[i].price} Kr
                 <button id="delete-btn" onclick="deleteItem3(${i})">SLETT</button>
                 </li>
                 `;
-      }
-      const prices = buyArray.map((buy) => buy.price);
-      let sum = 0;
-
-      for (let i = 0; i < prices.length; i++) {
-        sum += +prices[i];
-      }
-      sumList.innerHTML = `TOTALT Å HANDLE FOR: ${sum} KR`;
-
-      console.log(sum);
-    }
   }
 }
 
@@ -135,7 +137,17 @@ function deleteItem3(i) {
   if (confirmDelete3 === "ja") {
     alert(`${buyArray[i].item} er nå slettet.`);
     buyArray.splice(i, 1);
-    groceryArray3();
+    addingToBuyMore();
+
+    let sumList = document.getElementById("sum-list");
+
+    const prices = buyArray.map((buy) => buy.price);
+    let sum = 0;
+
+    for (let i = 0; i < prices.length; i++) {
+      sum -= -prices[i];
+      sumList.innerHTML = `TOTALT Å HANDLE FOR: ${sum} KR`;
+    }
   } else {
     alert("Sletting kansellert.");
   }
