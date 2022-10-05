@@ -130,8 +130,10 @@ input {
   width: 80px;
   float: left;
   border-radius: 10px;
-  background: #f51d1d;
+  background: #ffffff;
+  border: solid;
   margin-top: 10px;
+  color: black;
 }
 
 ul {
